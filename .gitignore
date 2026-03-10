@@ -27,3 +27,7 @@ yarn-error.log*
 
 # macOS
 .DS_Store
+
+# Internal Documents
+interview_guide.md
+Full\ Stack\ Interview\ Task.pdf

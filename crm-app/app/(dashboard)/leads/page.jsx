@@ -9,8 +9,8 @@ import {
     getSourceBadgeClass,
     formatStatus,
     formatSource,
+    formatDate,
     formatRelativeTime,
-    formatDateTime,
 } from '@/lib/utils';
 
 export default function LeadsPage() {
@@ -180,7 +180,7 @@ export default function LeadsPage() {
                                     <th>City</th>
                                     <th>Source</th>
                                     <th>Status</th>
-                                    <th>Created At</th>
+                                    <th>Created</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -198,7 +198,7 @@ export default function LeadsPage() {
                                             <span className={getStatusBadgeClass(lead.status)}>{formatStatus(lead.status)}</span>
                                         </td>
                                         <td style={{ color: 'var(--text-secondary)', fontSize: 13, whiteSpace: 'nowrap' }}>
-                                            {formatDateTime(lead.created_at)}
+                                            {formatDate(lead.created_at)}
                                         </td>
                                     </tr>
                                 ))}
