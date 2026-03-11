@@ -24,7 +24,11 @@ export default function CreateLeadPage() {
     const validate = () => {
         const errors = {};
         if (!form.name.trim()) errors.name = 'Name is required';
-        if (!form.phone.trim()) errors.phone = 'Phone number is required';
+        if (!form.phone.trim()) {
+            errors.phone = 'Phone number is required';
+        } else if (!/^[+\d][\d\s\-()]*$/.test(form.phone.trim())) {
+            errors.phone = 'Please enter a valid phone number (digits, spaces, +, - allowed)';
+        }
         return errors;
     };
 
